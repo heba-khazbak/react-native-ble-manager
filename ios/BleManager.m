@@ -61,7 +61,7 @@ bool hasListeners;
         NSLog(@"Error %@ :%@", characteristic.UUID, error);
         return;
     }
-    NSLog(@"Read value [%@]: %@", characteristic.UUID, characteristic.value);
+    // NSLog(@"Read value [%@]: %@", characteristic.UUID, characteristic.value);
     
     NSString *key = [self keyForPeripheral: peripheral andCharacteristic:characteristic];
     RCTResponseSenderBlock readCallback = [readCallbacks objectForKey:key];

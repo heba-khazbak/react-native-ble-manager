@@ -289,7 +289,7 @@ public class Peripheral extends BluetoothGattCallback {
 		super.onCharacteristicChanged(gatt, characteristic);
 
 		byte[] dataValue = characteristic.getValue();
-		Log.d(LOG_TAG, "Read: " + BleManager.bytesToHex(dataValue) + " from peripheral: " + device.getAddress());
+		// Log.d(LOG_TAG, "Read: " + BleManager.bytesToHex(dataValue) + " from peripheral: " + device.getAddress());
 
 		WritableMap map = Arguments.createMap();
 		map.putString("peripheral", device.getAddress());
